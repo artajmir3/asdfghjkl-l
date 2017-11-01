@@ -1,0 +1,86 @@
+body {
+    width: 100%;
+    height: 100%;
+    padding: 3rem 0 0;
+    margin: 0;
+    background-color: #f1f1f1;
+    position: relative;
+}
+
+body * {
+    position: relative;
+    display: block;
+}
+
+body .panels {
+    background-color: white;
+    color: #262626;
+    height: 267px;
+    width: 350px;
+    text-align: center;
+    border-radius: 2px;
+    border: 2px #c1c1c1;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem;
+}
+
+body .panels input, textarea {
+
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+body .panels textarea {
+    height: 75px;
+}
+
+body .panel .panel-submit {
+    width: 150px;
+    height: 25px;
+    /*border: 1px solid #c1c1c1;*/
+    background-color: #3897f0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border-radius: 2px;
+    /*color: darkgray;*/
+}
+
+body .panel .panel-logo {
+    height: 51px;
+    width: 175px;
+
+}
+
+body .panel input:focus {
+    border: 2px solid indianred;
+}
+
+body .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid #c1c1c1;
+    width: 100%;
+    padding: 0.3rem 2rem;
+}
+
+body .nav-link {
+    padding: 0.5rem 0.2rem;
+}
+
+body .header .login-btn {
+    position: relative;
+    float: right;
+}
