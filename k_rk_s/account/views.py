@@ -4,13 +4,14 @@ from django.contrib.auth.models import User
 from django.shortcuts import render
 
 # Create your views here.
+from django.views.generic.base import TemplateView
 from django.views.generic.edit import FormView
 
 from account.forms.user_forms import SignUpForm
 
 
 class SignUpView(FormView):
-    success_url = '/'
+    success_url = '/admin/'
     form_class = SignUpForm
     template_name = 'signup.html'
 
@@ -26,3 +27,7 @@ class SignUpView(FormView):
         user = authenticate(username=user.username, password=user.password)
         login(self.request, user)
         return super(SignUpView, self).form_valid(form)
+
+
+class HomeView(TemplateView):
+    template_name = 'index.html'
