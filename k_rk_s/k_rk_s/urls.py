@@ -19,4 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('account.urls', namespace='account')),
+    url(r'^', include('cafe.urls', namespace='cafe')),
 ]

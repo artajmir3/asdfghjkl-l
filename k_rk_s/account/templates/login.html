@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cafe Yab</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{%  static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static "vendor/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="{% static "css/stylish-portfolio.css"%}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<form method="post" id="login" class="panels">
+    {% csrf_token %}
+    {% include "_navbar.html" %}
+
+    <div class="container-fluid" style="padding:70px 0 0;">
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-3" style="text-align:center; border: 2px solid black; border-radius: 5px; padding:20px">
+                <form class="form-horizontal" action='' method="POST">
+                    <fieldset>
+                        <div id="legend">
+                            <legend class="">Register</legend>
+                        </div>
+                        <div class="control-group">
+                            <!-- Username -->
+                            <div class="controls">
+                                {{ form.username }}
+                                {{ form.username.errors }}
+                                <p class="help-block"></p>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <!-- E-mail -->
+                            <div class="controls">
+                                {{ form.email }}
+                                {{ form.email.errors }}
+                                <p class="help-block"></p>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <!-- Password-->
+                            <div class="controls">
+{#                                <input type="password" id="password" name="password" placeholder="Password" class="input-xlarge">#}
+                                    {{ form.password }}
+                                {{ form.password.errors }}
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <!-- Password -->
+                            <label class="control-label" for="password_confirm"></label>
+                            <div class="controls">
+{#                                <input type="password" id="password_confirm" name="password_confirm" placeholder="Confirm password" class="input-xlarge">#}
+                                {{ form.passwordconfirmation }}
+                                {{ form.passwordconfirmation.errors }}
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <!-- Button -->
+                            <div class="controls">
+                                <button class="btn btn-success" style="margin-top:10px">Register</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.js"></script>
+</form>
+</body>
+
+</html>
