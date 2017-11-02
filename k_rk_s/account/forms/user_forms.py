@@ -1,3 +1,4 @@
+from captcha.fields import CaptchaField
 from django.contrib.admin import forms
 from django.contrib.auth import forms, authenticate, login
 from django.contrib.auth.models import User
@@ -10,6 +11,7 @@ from django.forms.widgets import PasswordInput
 
 class SignUpForm(ModelForm):
     passwordconfirmation = CharField(widget=forms.PasswordInput)
+    captcha = CaptchaField()
 
 
     def clean(self):
